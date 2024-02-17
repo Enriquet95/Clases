@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function CargarDatos()
+        {
+            var v_numero=prompt("Ingrese Numero");
+            document.getElementById("Numero").value=v_numero;
+            var contenido ="<h1>Multiplicar <br> <h/1>" ;
+            for ( x=1 ; x<=12; x++){
+            contenido+= x +"x"+v_numero+"="+(x+v_numero)+"<br>";
+            }
+            document.getElementById('multi').innerHTML = contenido; 
+        }
+    </script>
+    <style>
+    body{
+        background-color: black;
+        color: aliceblue;
+    }
+    .multi{
+        color: aliceblue;
+    }
+    </style>
+</head>
+<body>
+    <form action="" id="Datos"></form>
+    <table>
+            <td> <h1>El numero es :</h1></td>
+            <td><input type="text" id="Numero"></td>
+        </tr>
+    </table>
+    <hr>
+    <button type="button" onclick="CargarDatos()">Cargar datos</button>
+    <div id="multi" >
+    </div>
+</body>
+</html>
